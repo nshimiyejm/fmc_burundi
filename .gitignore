@@ -102,3 +102,12 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Database
+*.sqlite3
+
+# vs code
+fmc_burundi/.vscode/
+
+# pycharm
+.idea/
