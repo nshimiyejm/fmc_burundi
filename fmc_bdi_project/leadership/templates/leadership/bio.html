@@ -1,0 +1,26 @@
+{% extends 'leadership/base.html' %}
+{% load static %}
+{% block title %}{{leader.first_name}}{% endblock %}
+{% block profile_description%}
+    <div class="about" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <img src="{{leader.image.url}}" class="img-fluid" height="70%">
+                    <span class="text-justify">{{leader.title}}</span>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-12 desc">
+                
+                    <h3>{{leader.first_name}} {{leader.last_name}} </h3>
+                    <p>
+                        {{ leader.description}}
+                    </p>
+                        <div ><button type="button" class="btn btn-primary" data-dismiss="modal" onclick="window.location.href='{% url 'profiles' %}'";><i class="fa fa-times"></i>Back</button></div>
+                </div>
+                
+    
+            </div>
+        </div>
+    </div>
+{% endblock%}
+
