@@ -16,6 +16,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+# Add these two line to pull modules used for files 
+from django.conf import settings
+from django.conf.urls.static import static
+
+import leadership.views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('leaders', leadership.views.profiles, name='profiles'), 
+    path('', leadership.views.index, name='home'), 
+    path('leadership/<int:leader_id>', leadership.views.bio, name='bio')
 ]
+
+# These two will be used to display static files
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
