@@ -1,6 +1,6 @@
 from django.db import models
 
-# Create your models here.
+# Class to hold profiles of the leaders in the church 
 class Profile_Role(models.Model): 
     # Holds the image of the user 
     image = models.ImageField(upload_to='images/') # uploads the this image to a folder named images 
@@ -19,3 +19,15 @@ class Profile_Role(models.Model):
 
     def __str__(self): 
         return self.first_name + ' ' + self.last_name  
+
+# Class to hold the description/ background information of the church 
+class Church_Background(models.Model):
+    history = models.TextField()
+
+# Class to hold the mission statement of the church 
+class Church_Mission(models.Model): 
+    mission = models.TextField()
+
+# Class to hold the Vison of the church 
+class Church_Vision(models.Model): 
+    vision  = models.TextField()

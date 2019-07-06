@@ -67,11 +67,15 @@
         </div>
     </nav>
     {% endblock %} 
-
-    {% block profile_description%} {% endblock%}
-    {% comment %} This block will hold the profile cards that display the leaders in the church {% endcomment %} 
-    {% block profile %} {% endblock %} 
     
+        
+            {% block hero_image %} {% endblock%}
+            {% block text %}    {% endblock %}
+        
+            {% block profile_description%} {% endblock%}
+            {% comment %} This block will hold the profile cards that display the leaders in the church {% endcomment %} 
+        
+            {% block profile %} {% endblock %} 
     
     {% comment %} Block footer {% endcomment %} 
     {% block js%}

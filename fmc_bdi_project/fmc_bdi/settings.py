@@ -29,9 +29,17 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
+# =========== Installed Applications ===============
+# - leadership
+# - django_wysiwyg
+# - tinymce_advanced
+# ==================================================
 INSTALLED_APPS = [
     'leadership',
+    'django_wysiwyg',
+    'tinymce',
+    'django_extensions',
+    # 'django-ckeditor',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -123,3 +131,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL  = '/media/'
 MEDIA_ROOT = BASE_DIR
+
+# Define the Editor to use in the Admin Panel 
+DJANGO_WYSIWYG_FLAVOR = "tinymce_advanced"
+# DJANGO_WYSIWYG_FLAVOR = "ckeditor"

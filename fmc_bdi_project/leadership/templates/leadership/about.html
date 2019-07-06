@@ -1,0 +1,20 @@
+{% extends 'leadership/base.html' %}
+{% block hero_image %} image will go here {% endblock%}
+{% block text %}
+<main role="main" class="container">
+    <div class="blog-post">
+        {% for story in about.all %}
+            {{ story.history|safe }}
+        {% endfor %}
+        <hr>
+        {% for fmc_mission in mission.all %}
+            {{ fmc_mission.mission|safe }}
+        {% endfor %}
+        <hr>
+        {% for fmc_vision in vision.all %}
+            {{ fmc_vision.vision|safe }}
+        {% endfor %}
+        
+    </div> 
+</main>
+{% endblock %}

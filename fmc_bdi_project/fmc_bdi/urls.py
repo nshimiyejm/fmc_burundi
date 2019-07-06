@@ -26,7 +26,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('leaders', leadership.views.profiles, name='profiles'), 
     path('', leadership.views.index, name='home'), 
-    path('leadership/<int:leader_id>', leadership.views.bio, name='bio')
+    path('leadership/<int:leader_id>', leadership.views.bio, name='bio'),
+    path('about', leadership.views.history, name='about'),
 ]
 
 # These two will be used to display static files

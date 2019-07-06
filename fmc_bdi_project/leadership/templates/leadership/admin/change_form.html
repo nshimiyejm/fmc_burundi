@@ -1,0 +1,18 @@
+{% extends "admin/change_form.html" %}
+
+{% load wysiwyg %}
+    {{ tag|safe }}
+{% block extrahead %}
+
+    {{ block.super|safe }}
+    {% wysiwyg_setup %}
+{% endblock %}
+
+{% block content %}
+    {{ tag|safe }}
+    {{ block.super|safe }}
+    {% wysiwyg_editor "id_description" %}
+    {% wysiwyg_editor "id_history" %}
+    {% wysiwyg_editor "id_mission" %}
+    {% wysiwyg_editor "id_vision" %}
+{% endblock %}

@@ -13,7 +13,7 @@
                 
                     <h3>{{leader.first_name}} {{leader.last_name}} </h3>
                     <p>
-                        {{ leader.description}}
+                        {{ leader.description|safe }}
                     </p>
                         <div ><button type="button" class="btn btn-primary" data-dismiss="modal" onclick="window.location.href='{% url 'profiles' %}'";><i class="fa fa-times"></i>Back</button></div>
                 </div>
